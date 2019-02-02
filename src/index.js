@@ -6,8 +6,11 @@ import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import chat from "./reducers";
+import { addUser } from "./actions/index.js";
 
 const store = createStore(chat);
+
+store.dispatch(addUser("Me"));
 
 ReactDOM.render(
   <Provider store={store}>
