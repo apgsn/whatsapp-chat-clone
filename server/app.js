@@ -1,3 +1,7 @@
+// based off of Flavio Copes' chat tutorial:
+// https://github.com/flaviocopes/chat-app-react-redux-saga-websockets
+// to launch the app: npm run run-app
+
 const WebSocket = require("ws");
 const Chance = require("chance");
 

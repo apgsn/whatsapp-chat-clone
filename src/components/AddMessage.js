@@ -6,8 +6,9 @@ const AddMessage = props => {
   return (
     <section id="new-message">
       <input
+        placeholder="Write a message"
         onKeyPress={e => {
-          if (e.key === "Enter") {
+          if (e.key === "Enter" && input.value.trim()) {
             props.dispatch(input.value, "Me");
             input.value = "";
           }

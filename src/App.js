@@ -8,13 +8,11 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div id="container">
+        <section id="main">
           <Sidebar />
-          <section id="main">
-            <MessagesList />
-            <AddMessage />
-          </section>
-        </div>
+          <MessagesList />
+          <AddMessage />
+        </section>
       </div>
     );
   }

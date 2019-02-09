@@ -2,9 +2,19 @@ import React from "react";
 import PropTypes from "prop-types";
 
 const Message = ({ message, author }) => (
-  <p>
-    <i>{author}</i>: {message}
-  </p>
+  <div className={"bubble " + (author === "Me" ? "me" : "other")}>
+    <div className={"bubble-in " + (author === "Me" ? "me-in" : "other-in")}>
+      <div>
+        {author !== "Me" ? (
+          <strong className="author-name">
+            {author}
+            <br />
+          </strong>
+        ) : null}
+        {message}
+      </div>
+    </div>
+  </div>
 );
 
 Message.propTypes = {
